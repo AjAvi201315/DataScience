@@ -1,4 +1,3 @@
-import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -6,15 +5,9 @@ import pandas as pd
 ######################################
 
 # (1) read dataframe
-import requests as requests
-
-url = 'https://github.com/edlich/eternalrepo/blob/3b284c8cad5433c81950bac84876fcbfc5de4f36/DS-WAHLFACH/countries.csv'
-url1 ='https://github.com/edlich/eternalrepo/blob/master/DS-WAHLFACH/countries.csv'
-# s = requests.get(url1).text
-# print(s)
-#test = pd.read_csv('https://raw.githubusercontent.com/cs109/2014_data/master/countries.csv')
-#print(test)
-df = pd.read_csv('countries.csv', delimiter=';')
+url = 'https://raw.githubusercontent.com/edlich/eternalrepo/3b284c8cad5433c81950bac84876fcbfc5de4f36/DS-WAHLFACH/countries.csv'
+df = pd.read_csv(url)
+# df = pd.read_csv('countries.csv', delimiter=';')
 
 # (2) Display some informations
 print('\n Ausgabe Dataframe')
